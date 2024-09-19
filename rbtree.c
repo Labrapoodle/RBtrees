@@ -30,7 +30,7 @@ struct rbtree *rbtree_add(struct rbtree *root, int key, char *value)
             return tree;
     }
 
-    struct rbtree *node = rbtree_create_node(root, key, value);
+    struct rbtree *node = rbtree_create_node(key, value);
     if (root == NULL)
     {
         root = node;
