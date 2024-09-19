@@ -9,7 +9,7 @@ struct rbtree
     int key;
     char *value;
 };
-
+void rb_transplant(struct rbtree *root, struct rbtree *old, struct rbtree *new);
 struct rbtree *rbtree_create_node(int key, char *value);
 struct rbtree *rbtree_add(struct rbtree *root, int key, char *value);
 struct rbtree *rbtree_lookup(struct rbtree *root, int key);
