@@ -6,9 +6,11 @@ struct rbtree
     struct rbtree *left;
     struct rbtree *right;
     char color;
-    char *key;
+    int key;
+    char *value;
 };
 
+struct rbtree *rbtree_create_node(int key, char *value);
 struct rbtree *rbtree_add(struct rbtree *root, int key, char *value);
 struct rbtree *rbtree_lookup(struct rbtree *root, int key);
 struct rbtree *rbtree_delete(struct rbtree *root, int key);
